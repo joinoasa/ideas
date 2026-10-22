@@ -132,7 +132,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
   const nums = args.filter((a) => /^\d+$/.test(a)).map(Number);
   if (!nums.length) { console.error('Usage: node scripts/first-look.mjs <number> [more numbers] [--dry-run] [--force]'); process.exit(1); }
-  const tree = await load(TREE_DATA);
-  const ideas = await load(IDEAS_DATA);
-  for (const n of nums) await postFirstLook(n, { dry: args.includes('--dry-run'), force: args.includes('--force'), tree, ideas });
+  try {
+    const tree = await load(TREE_DATA);
+    const ideas = await load(IDEAS_DATA);
+    for (const n of nums) await postFirstLook(n, { dry: args.includes('--dry-run'), force: args.includes('--force'), tree, ideas });
+  } catch (e) {
+    // In Actions, ::error:: shows the reason on the run page.
+    console.error(process.env.GITHUB_ACTIONS ? `::error::${e.message.replace(/\n/g, ' ')}` : e.message);
+    process.exit(1);
+  }
 }
