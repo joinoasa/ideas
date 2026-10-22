@@ -51,7 +51,6 @@ The script sets the outcome label, removes `needs-triage`, writes a **Where it l
 ## Notes for AI assistants
 
 - To help someone *come up with* an idea, follow the [brainstorming guide](https://joinoasa.org/docs/brainstorm/). This page is for sorting ideas that have been posted.
-
 - Stay in OASA's way of thinking: read the [core values](https://github.com/joinoasa/brand/tree/main/documents/core-values) and the [manifesto](https://github.com/joinoasa/brand/tree/main/documents/manifesto).
 - Prefer existing nodes and standards over new ones. Reuse IDs exactly as they appear in the tree.
 - New IDs take the next free number in the right prefix (`G-`, `M-`, `O-`, …). Never reuse or renumber an existing ID.
