@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Talk an idea through first
+    url: https://github.com/orgs/joinoasa/discussions/categories/ideas
+    about: Start a discussion in the Ideas category. It's copied here automatically.
+  - name: Browse the tech tree
+    url: https://joinoasa.org/techtree/
+    about: See what already exists before posting.

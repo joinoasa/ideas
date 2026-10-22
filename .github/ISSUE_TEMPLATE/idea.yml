@@ -1,0 +1,65 @@
+name: Idea
+description: Share an idea for something OASA could build. Anyone can post.
+title: "Your idea in a few words"
+labels: ["needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing. Your idea gets a number (IDEA-0042 and so on) and is sorted onto the [tech tree](https://joinoasa.org/techtree/). Rough ideas are welcome; only the first two boxes are required.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's missing or broken?
+      description: The problem, need or opportunity.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would we build?
+      description: Describe the idea. Sketches, links and examples help.
+    validations:
+      required: true
+  - type: dropdown
+    id: areas
+    attributes:
+      label: Which areas does it touch?
+      multiple: true
+      options:
+        - Air
+        - Ground
+        - Surface water
+        - Underwater
+        - Lighter-than-air and wind
+        - Space
+        - Comms and mesh
+        - Power
+        - Sensing
+        - Autonomy and AI
+        - Manipulation and tools
+        - Infrastructure
+        - Operations and community
+        - Other
+  - type: input
+    id: nodes
+    attributes:
+      label: Related tech tree nodes
+      description: Optional. Node IDs from the tech tree, like X-6 or G-1.
+      placeholder: X-6, G-1
+  - type: input
+    id: skills
+    attributes:
+      label: Skills it needs
+      placeholder: RF, embedded, software, mechanical, CAD, testing, docs
+  - type: textarea
+    id: first-step
+    attributes:
+      label: First small step
+      description: What's the smallest thing someone could build or test first?
+  - type: checkboxes
+    id: ai
+    attributes:
+      label: How it was made
+      options:
+        - label: I brainstormed this with an AI assistant

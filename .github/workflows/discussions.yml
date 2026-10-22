@@ -1,0 +1,38 @@
+# Copies new posts from the org's Ideas discussions into this repo as numbered ideas.
+# Optional secret DISCUSSIONS_TOKEN: a token that can comment on joinoasa/.github discussions,
+# so the bot can reply with the new idea's number. Without it, ideas are still copied.
+name: Copy ideas from Discussions
+
+on:
+  schedule:
+    - cron: '23 * * * *' # hourly
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Only list what would be copied'
+        type: boolean
+        default: false
+
+permissions:
+  issues: write
+  contents: read
+  discussions: read
+
+concurrency:
+  group: import-discussions
+  cancel-in-progress: false
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Copy new discussions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DISCUSSIONS_TOKEN: ${{ secrets.DISCUSSIONS_TOKEN }}
+        run: node scripts/import-discussions.mjs ${{ inputs.dry_run && '--dry-run' || '' }}

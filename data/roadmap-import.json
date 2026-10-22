@@ -1,0 +1,1334 @@
+{
+  "skipped_government_track": [
+    "Red team + CUAS partnerships",
+    "Government applications (company track)",
+    "All-in-one deployable sensor kits",
+    "Persistent remote watch + maritime awareness",
+    "Event security, hazmat sensing",
+    "Counter-drone detection deep dive",
+    "Rail inspection robot",
+    "Crash and crime scene mapping",
+    "CUAS sensor network",
+    "Beamformed mitigation research",
+    "Railway live map",
+    "Coverage planning map",
+    "Government moonshots"
+  ],
+  "ideas": [
+    {
+      "n": 1,
+      "id": "IDEA-0001",
+      "date": "2026-10-19",
+      "title": "Payload \"app store\" (OASA-PAY)",
+      "notes": "Standard mount, power, data; self-describing payloads auto-appear in TAK",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-PAY1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 2,
+      "id": "IDEA-0002",
+      "date": "2026-10-19",
+      "title": "Thermal imaging track",
+      "notes": "Shared thermal core → handheld monocular, drone gimbal, fixed node, vehicle mount",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 3,
+      "id": "IDEA-0003",
+      "date": "2026-10-19",
+      "title": "Mapping and 3D scenes",
+      "notes": "Build on OpenDroneMap/WebODM; AI 3D scenes (Gaussian splatting/NeRF) with real coordinates; live maps from fixed-wing orbits; AI markers into TAK",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-6"
+      ],
+      "note": ""
+    },
+    {
+      "n": 4,
+      "id": "IDEA-0004",
+      "date": "2026-10-19",
+      "title": "Swarm mapping",
+      "notes": "Drones split an area and feed one shared map",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-8"
+      ],
+      "note": ""
+    },
+    {
+      "n": 5,
+      "id": "IDEA-0005",
+      "date": "2026-10-19",
+      "title": "Task handoff + idle status",
+      "notes": "Drone states in TAK (idle/tasked/en route/returning/charging/fault); task queue; auto-assign; mid-mission handoff",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-TSK1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 6,
+      "id": "IDEA-0006",
+      "date": "2026-10-19",
+      "title": "Node kits product family",
+      "notes": "Backpack, vehicle, home/base, tower, aerial, hive; bundled \"team kits\" (e.g., farm kit)",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-NODE1",
+        "T-NODE2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 7,
+      "id": "IDEA-0007",
+      "date": "2026-10-19",
+      "title": "Proprietary tech support",
+      "notes": "Adapter/driver layer; \"OASA Compatible\" and \"OASA Open\" badges; partner program",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Covered by the standards and certification process (OASA Compatible / OASA Open) in the operations doc, System 4."
+    },
+    {
+      "n": 8,
+      "id": "IDEA-0008",
+      "date": "2026-10-19",
+      "title": "Open black box (OASA-LOG)",
+      "notes": "Common log format across PX4/ArduPilot/payloads/mesh/power; crash-survivable recorder; community failure database",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-LOG1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 9,
+      "id": "IDEA-0009",
+      "date": "2026-10-19",
+      "title": "Tethered relay drone",
+      "notes": "Power up the tether; data over fiber/Ethernet; auto winch; hours-long mesh tower",
+      "outcome": "on-tree",
+      "nodes": [
+        "A-4"
+      ],
+      "note": ""
+    },
+    {
+      "n": 10,
+      "id": "IDEA-0010",
+      "date": "2026-10-19",
+      "title": "Blimps, aerostats and kites track",
+      "notes": "Long-endurance relays and cameras; tethered aerostat towers; kite-lifted nodes/cameras; same payload mount",
+      "outcome": "on-tree",
+      "nodes": [
+        "L-1",
+        "L-4",
+        "L-5"
+      ],
+      "note": "The whole Lighter-Than-Air & Wind branch (L-1 to L-7)."
+    },
+    {
+      "n": 11,
+      "id": "IDEA-0011",
+      "date": "2026-10-19",
+      "title": "Power track",
+      "notes": "Solar for nodes/docks; open BMS with health in TAK; power budget planner; swappable packs; hybrid",
+      "outcome": "on-tree",
+      "nodes": [
+        "R-PWR1",
+        "R-PWR2"
+      ],
+      "note": "Battery health in TAK, a power budget planner and swappable packs aren't separate nodes yet; good candidates to expand R-PWR1."
+    },
+    {
+      "n": 12,
+      "id": "IDEA-0012",
+      "date": "2026-10-19",
+      "title": "Weather nodes",
+      "notes": "Wind, gusts, rain, temp, visibility; automatic go/no-go with per-airframe limits",
+      "outcome": "on-tree",
+      "nodes": [
+        "O-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 13,
+      "id": "IDEA-0013",
+      "date": "2026-10-19",
+      "title": "Ground robots and boats on the mesh",
+      "notes": "PX4/ArduPilot already support rovers and boats",
+      "outcome": "on-tree",
+      "nodes": [
+        "G-1",
+        "S-1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 14,
+      "id": "IDEA-0014",
+      "date": "2026-10-19",
+      "title": "RF scanner node",
+      "notes": "See local radio environment; pick clean channels; spot interference",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-RF1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 15,
+      "id": "IDEA-0015",
+      "date": "2026-10-19",
+      "title": "Acoustic sensor nodes",
+      "notes": "Detect/locate drones, gunshots, chainsaws (wildlife/forest protection)",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 16,
+      "id": "IDEA-0016",
+      "date": "2026-10-19",
+      "title": "Drop/delivery payload",
+      "notes": "SAR supplies, farm use",
+      "outcome": "on-tree",
+      "nodes": [
+        "M-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 17,
+      "id": "IDEA-0017",
+      "date": "2026-10-19",
+      "title": "Lightweight open LiDAR",
+      "notes": "Mapping under canopy",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 18,
+      "id": "IDEA-0018",
+      "date": "2026-10-19",
+      "title": "Simulator / digital twin",
+      "notes": "Test missions, swarms, mesh; training",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-SIM1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 19,
+      "id": "IDEA-0019",
+      "date": "2026-10-19",
+      "title": "OASA Academy",
+      "notes": "Courses and skill badges; feeds contributor pathway",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Concept doc §5.7 and the Academy docs page."
+    },
+    {
+      "n": 20,
+      "id": "IDEA-0020",
+      "date": "2026-10-19",
+      "title": "Hardware-in-the-loop test bench",
+      "notes": "Standard bench for radios, ESCs, flight controllers",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-BENCH1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 21,
+      "id": "IDEA-0021",
+      "date": "2026-10-19",
+      "title": "Mission template library",
+      "notes": "Orbit-and-map, perimeter patrol, crop survey, etc.",
+      "outcome": "parked",
+      "nodes": [
+        "T-TSK1"
+      ],
+      "note": "Not a node yet. Candidate: a mission templates node under T-TSK1 (orbit-and-map, perimeter patrol, crop survey)."
+    },
+    {
+      "n": 22,
+      "id": "IDEA-0022",
+      "date": "2026-10-19",
+      "title": "Ground robots track",
+      "notes": "Wheeled, tracked (skid-steer via ArduPilot/PX4 Rover), legged \"dogs\" (ROS 2, e.g. Stanford Pupper); carry nodes, sensors, gear; can launch drones",
+      "outcome": "on-tree",
+      "nodes": [
+        "G-1",
+        "G-2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 23,
+      "id": "IDEA-0023",
+      "date": "2026-10-19",
+      "title": "Water surface vessels track",
+      "notes": "ArduPilot boats and sailboats; survey, sampling, SAR; buoy mesh/weather nodes; solar or sail-powered long missions",
+      "outcome": "on-tree",
+      "nodes": [
+        "S-1",
+        "S-2",
+        "S-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 24,
+      "id": "IDEA-0024",
+      "date": "2026-10-19",
+      "title": "Submarines track",
+      "notes": "Build on ArduSub; tether, surfacing, or acoustic modem links; surface buoy/boat as mesh gateway",
+      "outcome": "on-tree",
+      "nodes": [
+        "U-1",
+        "U-4",
+        "U-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 25,
+      "id": "IDEA-0025",
+      "date": "2026-10-19",
+      "title": "Open acoustic modem",
+      "notes": "Underwater data link; real tech gap",
+      "outcome": "on-tree",
+      "nodes": [
+        "U-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 26,
+      "id": "IDEA-0026",
+      "date": "2026-10-19",
+      "title": "RF scanning in every radio",
+      "notes": "Radios scan when idle; network becomes distributed spectrum monitor",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-RF1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 27,
+      "id": "IDEA-0027",
+      "date": "2026-10-19",
+      "title": "RF direction finding",
+      "notes": "Bearing lines on TAK; multiple bearings locate source; dispatch drone (with DF homing) and ground operator; beamforming nulls interference",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-RF2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 28,
+      "id": "IDEA-0028",
+      "date": "2026-10-19",
+      "title": "Acoustic triangulation",
+      "notes": "GNSS-time-synced nodes locate sounds; markers on TAK",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 29,
+      "id": "IDEA-0029",
+      "date": "2026-10-19",
+      "title": "Small radar",
+      "notes": "Low-cost radar chips: altitude, obstacle avoidance, see through fog/dust/smoke, detect aircraft",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-4"
+      ],
+      "note": ""
+    },
+    {
+      "n": 30,
+      "id": "IDEA-0030",
+      "date": "2026-10-19",
+      "title": "Sensor fusion",
+      "notes": "Camera + thermal + LiDAR + radar into one shared view",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-7"
+      ],
+      "note": ""
+    },
+    {
+      "n": 31,
+      "id": "IDEA-0031",
+      "date": "2026-10-19",
+      "title": "Test bench software",
+      "notes": "Open test runner, standard results format, shared results database",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-BENCH1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 32,
+      "id": "IDEA-0032",
+      "date": "2026-10-19",
+      "title": "Solar fixed-wing",
+      "notes": "Lightweight flexible panels, charge controllers, efficient airframe; long-range survey/roving relay",
+      "outcome": "on-tree",
+      "nodes": [
+        "A-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 33,
+      "id": "IDEA-0033",
+      "date": "2026-10-19",
+      "title": "Solar blimp",
+      "notes": "Remote-controlled, station-keeping; cameras, sensors, mesh node; near-permanent eye in the sky",
+      "outcome": "on-tree",
+      "nodes": [
+        "L-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 34,
+      "id": "IDEA-0034",
+      "date": "2026-10-19",
+      "title": "Persistent sensor networks",
+      "notes": "Solar nodes left out for months reporting over mesh",
+      "outcome": "on-tree",
+      "nodes": [
+        "O-2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 35,
+      "id": "IDEA-0035",
+      "date": "2026-10-19",
+      "title": "Robot mothership",
+      "notes": "Rover or boat that carries, launches, recovers and charges drones",
+      "outcome": "on-tree",
+      "nodes": [
+        "G-4",
+        "S-6"
+      ],
+      "note": ""
+    },
+    {
+      "n": 36,
+      "id": "IDEA-0036",
+      "date": "2026-10-19",
+      "title": "Air-to-ground teamwork",
+      "notes": "Drone spots something; ground robot auto-dispatched",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-TSK1",
+        "MS-5"
+      ],
+      "note": "Covered by tasking (T-TSK1) and the Multi-Domain Teams moonshot."
+    },
+    {
+      "n": 37,
+      "id": "IDEA-0037",
+      "date": "2026-10-19",
+      "title": "Time sync standard",
+      "notes": "Precise shared timing for triangulation, DF, video sync",
+      "outcome": "on-tree",
+      "nodes": [
+        "R-TIME1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 38,
+      "id": "IDEA-0038",
+      "date": "2026-10-19",
+      "title": "Edge AI module",
+      "notes": "Standard AI compute payload for onboard detection on any vehicle",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-AI1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 39,
+      "id": "IDEA-0039",
+      "date": "2026-10-19",
+      "title": "OASA makerspaces",
+      "notes": "Physical build/design spaces: fabrication, electronics/RF bench, test range access; start small (partner with existing makerspaces), grow to OASA-run labs",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Became the chapters-inside-makerspaces model (operations doc, System 9)."
+    },
+    {
+      "n": 40,
+      "id": "IDEA-0040",
+      "date": "2026-10-19",
+      "title": "Private membership tier",
+      "notes": "Apply or be invited; interview/vetting; member-only makerspace access, restricted/commissioned projects, early access; coexists with open public community",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Operations doc, System 1."
+    },
+    {
+      "n": 41,
+      "id": "IDEA-0041",
+      "date": "2026-10-19",
+      "title": "Membership: no dues",
+      "notes": "Invite/apply only, no OASA dues; vetting covers skill, trust for sensitive/contract work, and tool safety. Members who want makerspace access pay the makerspace directly",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Adopted: membership is free (concept doc §5.4)."
+    },
+    {
+      "n": 42,
+      "id": "IDEA-0042",
+      "date": "2026-10-19",
+      "title": "OASA chapters at makerspaces",
+      "notes": "Members start OASA chapters inside existing makerspaces; OASA doesn't rent space. Makerspaces gain an advanced autonomous systems program; \"chapter kit\" with curriculum, reference builds, events, branding",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Operations doc, System 9."
+    },
+    {
+      "n": 43,
+      "id": "IDEA-0043",
+      "date": "2026-10-19",
+      "title": "Member tiers",
+      "notes": "Tiers within membership unlock more projects and responsibility",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Operations doc, System 1."
+    },
+    {
+      "n": 44,
+      "id": "IDEA-0044",
+      "date": "2026-10-19",
+      "title": "Project join types",
+      "notes": "Open-to-members (just start), apply/invite-only, and member-proposed projects via a project proposal process",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Operations doc, System 2."
+    },
+    {
+      "n": 45,
+      "id": "IDEA-0045",
+      "date": "2026-10-19",
+      "title": "Members-only project work",
+      "notes": "Non-members contribute ideas and apply; only members work on projects; designs still published openly",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Concept doc §5.3."
+    },
+    {
+      "n": 46,
+      "id": "IDEA-0046",
+      "date": "2026-10-19",
+      "title": "Project access levels + project leads",
+      "notes": "Projects tagged by access level; each has a designated lead who manages tasks and approves who joins",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Concept doc §5.5."
+    },
+    {
+      "n": 47,
+      "id": "IDEA-0047",
+      "date": "2026-10-19",
+      "title": "First makerspace: Northern Virginia",
+      "notes": "Partner with an existing space (candidates: Nova Labs, Fairfax; Makersmiths, Leesburg/Purcellville)",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Chapters page; first planned chapter."
+    },
+    {
+      "n": 48,
+      "id": "IDEA-0048",
+      "date": "2026-10-19",
+      "title": "Academy workshops as projects",
+      "notes": "Members create and lead workshops; foundations (physics, electronics, programming, math, safety) build into disciplines (aerospace, mechanical, marine, RF, power, sensing, controls/AI)",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Concept doc §5.7."
+    },
+    {
+      "n": 49,
+      "id": "IDEA-0049",
+      "date": "2026-10-19",
+      "title": "Solar-powered boats",
+      "notes": "Long-endurance survey, sampling, buoy/relay duty; shares solar + BMS tech with blimps and wings",
+      "outcome": "on-tree",
+      "nodes": [
+        "S-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 50,
+      "id": "IDEA-0050",
+      "date": "2026-10-19",
+      "title": "Solar kites",
+      "notes": "Kites with lightweight panels powering sensors/mesh nodes high up; tether can also carry power/data",
+      "outcome": "on-tree",
+      "nodes": [
+        "L-2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 51,
+      "id": "IDEA-0051",
+      "date": "2026-10-19",
+      "title": "Airborne wind power (kite generators)",
+      "notes": "Kite or tethered wing generates power from wind for sensors aloft or ground nodes",
+      "outcome": "on-tree",
+      "nodes": [
+        "L-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 52,
+      "id": "IDEA-0052",
+      "date": "2026-10-19",
+      "title": "OASA tech tree",
+      "notes": "Video-game-style tree: shared roots (comms, power, security, control) branch into domains and sciences; projects unlock others; members see what to build toward and what's blocking them",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Built: joinoasa.org/techtree."
+    },
+    {
+      "n": 53,
+      "id": "IDEA-0053",
+      "date": "2026-10-19",
+      "title": "Moonshot: Living Network",
+      "notes": "Self-sustaining regional mesh on solar/wind; live coverage map; private networks run encrypted inside the shared backbone",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-1"
+      ],
+      "note": ""
+    },
+    {
+      "n": 54,
+      "id": "IDEA-0054",
+      "date": "2026-10-19",
+      "title": "Moonshot: Disaster response truck + trailer",
+      "notes": "Mobile hive; drones auto-launch while driving or parked to find and map disaster-stricken areas; deploys mesh",
+      "outcome": "on-tree",
+      "nodes": [
+        "O-6",
+        "MS-2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 55,
+      "id": "IDEA-0055",
+      "date": "2026-10-19",
+      "title": "Disaster solar blimp",
+      "notes": "Steerable, heavy-lift solar blimp carrying high-quality sensors and repeaters over a disaster area",
+      "outcome": "on-tree",
+      "nodes": [
+        "L-6"
+      ],
+      "note": ""
+    },
+    {
+      "n": 56,
+      "id": "IDEA-0056",
+      "date": "2026-10-19",
+      "title": "High-altitude solar plane / glider",
+      "notes": "Long-endurance \"poor man's repeater\" and imaging platform",
+      "outcome": "on-tree",
+      "nodes": [
+        "A-6"
+      ],
+      "note": ""
+    },
+    {
+      "n": 57,
+      "id": "IDEA-0057",
+      "date": "2026-10-19",
+      "title": "Feral hog detection (farm)",
+      "notes": "Thermal + AI detection at night; loudspeaker deterrent; live hog positions marked on TAK for hunters",
+      "outcome": "on-tree",
+      "nodes": [
+        "O-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 58,
+      "id": "IDEA-0058",
+      "date": "2026-10-19",
+      "title": "River survey boat + sub",
+      "notes": "Autonomous survey down rivers; water sampling at pre-set points; track changes over time",
+      "outcome": "on-tree",
+      "nodes": [
+        "S-1",
+        "S-4",
+        "U-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 59,
+      "id": "IDEA-0059",
+      "date": "2026-10-19",
+      "title": "Solar cleanup boat",
+      "notes": "Autonomous boat skimming algae/debris from rivers and lakes",
+      "outcome": "on-tree",
+      "nodes": [
+        "S-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 60,
+      "id": "IDEA-0060",
+      "date": "2026-10-19",
+      "title": "City trash-pickup robots",
+      "notes": "Ground robots collecting litter in parks, streets, shorelines",
+      "outcome": "on-tree",
+      "nodes": [
+        "G-3"
+      ],
+      "note": ""
+    },
+    {
+      "n": 61,
+      "id": "IDEA-0061",
+      "date": "2026-10-19",
+      "title": "Underwater tether",
+      "notes": "Strong, light fiber tether for subs (power and/or data) alongside acoustic wireless",
+      "outcome": "on-tree",
+      "nodes": [
+        "U-2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 62,
+      "id": "IDEA-0062",
+      "date": "2026-10-20",
+      "title": "Wildfire watch blimp",
+      "notes": "Solar blimp anchored high like a fire tower, or roaming in fire season; thermal + smoke detection; maps fire lines for crews",
+      "outcome": "on-tree",
+      "nodes": [
+        "O-7"
+      ],
+      "note": ""
+    },
+    {
+      "n": 63,
+      "id": "IDEA-0063",
+      "date": "2026-10-20",
+      "title": "Infrastructure inspection tree",
+      "notes": "Pipe and sewer crawlers, powerline robots across mountainous terrain, bridges, towers; robots go where humans can't",
+      "outcome": "on-tree",
+      "nodes": [
+        "I-1",
+        "I-2",
+        "I-3",
+        "I-4"
+      ],
+      "note": "The Infrastructure Inspection branch."
+    },
+    {
+      "n": 64,
+      "id": "IDEA-0064",
+      "date": "2026-10-20",
+      "title": "Thermal search grid",
+      "notes": "Multiple drones autonomously split and fly a thermal search area; finds on TAK",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-9"
+      ],
+      "note": ""
+    },
+    {
+      "n": 65,
+      "id": "IDEA-0065",
+      "date": "2026-10-20",
+      "title": "Wildlife conservation (land + water)",
+      "notes": "Reach out to conservationists to learn needs; tracking, counts, anti-poaching, nesting/marine monitoring",
+      "outcome": "parked",
+      "nodes": [
+        "A-10",
+        "U-6",
+        "O-20"
+      ],
+      "note": "Next step: talk with conservationists about what they need before adding nodes."
+    },
+    {
+      "n": 66,
+      "id": "IDEA-0066",
+      "date": "2026-10-20",
+      "title": "Medical delivery",
+      "notes": "Interesting but regulated; explore later via EMS/hospital partners",
+      "outcome": "parked",
+      "nodes": [
+        "M-3"
+      ],
+      "note": "Regulated; explore later with EMS and hospital partners."
+    },
+    {
+      "n": 67,
+      "id": "IDEA-0067",
+      "date": "2026-10-20",
+      "title": "Voice control",
+      "notes": "Speak commands to drones and fleet; later-stage",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-AI3",
+        "MS-18"
+      ],
+      "note": ""
+    },
+    {
+      "n": 68,
+      "id": "IDEA-0068",
+      "date": "2026-10-20",
+      "title": "AR asset view",
+      "notes": "Real-time overlay of where assets, nodes and markers are",
+      "outcome": "parked",
+      "nodes": [
+        "T-MAP1"
+      ],
+      "note": "Not a node yet. Candidate: an AR view node after T-MAP1."
+    },
+    {
+      "n": 69,
+      "id": "IDEA-0069",
+      "date": "2026-10-20",
+      "title": "Simple interface",
+      "notes": "One-button / no-training mode; hard to make simple, worth it",
+      "outcome": "parked",
+      "nodes": [
+        "T-MAP2"
+      ],
+      "note": "Not a node yet. Candidate: a one-button mode for T-MAP2."
+    },
+    {
+      "n": 70,
+      "id": "IDEA-0070",
+      "date": "2026-10-20",
+      "title": "Grand challenges (ongoing)",
+      "notes": "Always-running competitions with prizes (e.g., 50 km on one battery, first wireless sub-to-surface link)",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Recognition (operations doc, System 6) and funding (System 7)."
+    },
+    {
+      "n": 71,
+      "id": "IDEA-0071",
+      "date": "2026-10-20",
+      "title": "Demo days",
+      "notes": "Chapter showcases of member builds",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Chapter rhythm (operations doc, System 9)."
+    },
+    {
+      "n": 72,
+      "id": "IDEA-0072",
+      "date": "2026-10-20",
+      "title": "School outreach",
+      "notes": "Academy-lite for high schools and colleges",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Academy council (operations doc, System 3)."
+    },
+    {
+      "n": 73,
+      "id": "IDEA-0073",
+      "date": "2026-10-20",
+      "title": "Public safety partnerships",
+      "notes": "Fire, rescue, law enforcement and other safety teams; real-world testers; grow with communities",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Partnerships (operations doc, System 10)."
+    },
+    {
+      "n": 74,
+      "id": "IDEA-0074",
+      "date": "2026-10-20",
+      "title": "Commercial platforms",
+      "notes": "Pressure-washing drones, construction progress tracking, automatic roof inspection, and more",
+      "outcome": "on-tree",
+      "nodes": [
+        "C-1",
+        "C-2",
+        "C-3"
+      ],
+      "note": "The Commercial Services branch."
+    },
+    {
+      "n": 75,
+      "id": "IDEA-0075",
+      "date": "2026-10-20",
+      "title": "OASA tech toolkit standard",
+      "notes": "Standard tool kits for OASA techs (field, bench, RF, chapter); build a strong tech culture",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Culture (operations doc, System 14): the OASA Tech."
+    },
+    {
+      "n": 76,
+      "id": "IDEA-0076",
+      "date": "2026-10-20",
+      "title": "Governance and decentralization",
+      "notes": "How decisions get made as OASA grows; keep OASA itself decentralized",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Operations doc, System 3."
+    },
+    {
+      "n": 77,
+      "id": "IDEA-0077",
+      "date": "2026-10-20",
+      "title": "Moonshot: atmospheric satellites / perma gliders",
+      "notes": "Indefinite flight: solar by day, batteries + autonomous soaring by night; relay, camera, sensor platform",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-10",
+        "A-8",
+        "A-9"
+      ],
+      "note": ""
+    },
+    {
+      "n": 78,
+      "id": "IDEA-0078",
+      "date": "2026-10-20",
+      "title": "Self-repairing fleet + logistics",
+      "notes": "Field repair cells print/swap parts; logistics fleet hauls damaged devices to automated repair centers",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-11"
+      ],
+      "note": ""
+    },
+    {
+      "n": 79,
+      "id": "IDEA-0079",
+      "date": "2026-10-20",
+      "title": "Reforestation + wildfire prevention",
+      "notes": "Seed planting, regrowth tracking, fire-risk mapping near communities, controlled burn support with fire agencies",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-12"
+      ],
+      "note": ""
+    },
+    {
+      "n": 80,
+      "id": "IDEA-0080",
+      "date": "2026-10-20",
+      "title": "Ocean cleanup + restoration armada",
+      "notes": "Fully automated cleanup cycle; reef and wetland restoration",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-13"
+      ],
+      "note": ""
+    },
+    {
+      "n": 81,
+      "id": "IDEA-0081",
+      "date": "2026-10-20",
+      "title": "City digital twin + automation",
+      "notes": "Intelligent sensors and mapping interacting with the world",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-14"
+      ],
+      "note": ""
+    },
+    {
+      "n": 82,
+      "id": "IDEA-0082",
+      "date": "2026-10-20",
+      "title": "Lifeguard assist network",
+      "notes": "Shore launcher with self-inflating float; drowning/scream detection; drone float drop with two-way speaker; budget tiers for different lifeguard orgs",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-15"
+      ],
+      "note": ""
+    },
+    {
+      "n": 83,
+      "id": "IDEA-0083",
+      "date": "2026-10-20",
+      "title": "Underground explorers",
+      "notes": "Autonomous 3D mapping of collapsed buildings and tunnels; drop own relays",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-16"
+      ],
+      "note": ""
+    },
+    {
+      "n": 84,
+      "id": "IDEA-0084",
+      "date": "2026-10-20",
+      "title": "Deploy-scout-return",
+      "notes": "Bigger vehicles carry and deploy others (e.g., solar boat launches scout drone that returns with where to go next)",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-TSK2"
+      ],
+      "note": ""
+    },
+    {
+      "n": 85,
+      "id": "IDEA-0085",
+      "date": "2026-10-20",
+      "title": "Laser comms + power beaming",
+      "notes": "Vehicles calculate and aim lasers at each other in flight",
+      "outcome": "on-tree",
+      "nodes": [
+        "R-COM4",
+        "R-PWR5",
+        "MS-17"
+      ],
+      "note": ""
+    },
+    {
+      "n": 86,
+      "id": "IDEA-0086",
+      "date": "2026-10-20",
+      "title": "Biomimetic robots",
+      "notes": "Flapping-wing flyers, fish-like subs",
+      "outcome": "on-tree",
+      "nodes": [
+        "A-10",
+        "U-6"
+      ],
+      "note": ""
+    },
+    {
+      "n": 87,
+      "id": "IDEA-0087",
+      "date": "2026-10-20",
+      "title": "Mission from a sentence + live voice",
+      "notes": "\"Get a closer look,\" \"fly further north,\" \"look for thermals within 100 m of me\"",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-AI2",
+        "T-AI3",
+        "MS-18"
+      ],
+      "note": ""
+    },
+    {
+      "n": 88,
+      "id": "IDEA-0088",
+      "date": "2026-10-20",
+      "title": "Space branch + Starshots",
+      "notes": "Near-space balloons, CubeSats, planetary analogs; beyond-moonshot space and interstellar goals",
+      "outcome": "on-tree",
+      "nodes": [
+        "SP-1",
+        "SP-2",
+        "SP-3",
+        "SP-4",
+        "SP-5"
+      ],
+      "note": "The Space branch and the five starshots."
+    },
+    {
+      "n": 89,
+      "id": "IDEA-0089",
+      "date": "2026-10-20",
+      "title": "National resilience mesh",
+      "notes": "Self-sustaining mesh with backup comms, timing and sustainable power when things fail",
+      "outcome": "on-tree",
+      "nodes": [
+        "MS-20"
+      ],
+      "note": ""
+    },
+    {
+      "n": 90,
+      "id": "IDEA-0090",
+      "date": "2026-10-20",
+      "title": "Road condition patrol",
+      "notes": "Drones scope major roads and suburban streets for damage and wear; also flag clogged storm drains/culverts",
+      "outcome": "on-tree",
+      "nodes": [
+        "I-6"
+      ],
+      "note": ""
+    },
+    {
+      "n": 91,
+      "id": "IDEA-0091",
+      "date": "2026-10-20",
+      "title": "Snow and ice robots + ski patrol",
+      "notes": "Autonomous sidewalk/street plowing (small and slow is fine); avalanche beacon search, slope watch, supply drops",
+      "outcome": "on-tree",
+      "nodes": [
+        "G-6",
+        "X-11",
+        "O-21"
+      ],
+      "note": ""
+    },
+    {
+      "n": 92,
+      "id": "IDEA-0092",
+      "date": "2026-10-20",
+      "title": "Water main leak sensors",
+      "notes": "Strategically placed acoustic sensors",
+      "outcome": "on-tree",
+      "nodes": [
+        "I-7"
+      ],
+      "note": ""
+    },
+    {
+      "n": 93,
+      "id": "IDEA-0093",
+      "date": "2026-10-20",
+      "title": "Grid inspection",
+      "notes": "Pre-map the grid, then drones inspect lines and substations themselves",
+      "outcome": "on-tree",
+      "nodes": [
+        "I-8"
+      ],
+      "note": ""
+    },
+    {
+      "n": 94,
+      "id": "IDEA-0094",
+      "date": "2026-10-20",
+      "title": "Dam and levee watch",
+      "notes": "Autonomous or assisted inspection of large critical infrastructure",
+      "outcome": "on-tree",
+      "nodes": [
+        "I-9"
+      ],
+      "note": ""
+    },
+    {
+      "n": 95,
+      "id": "IDEA-0095",
+      "date": "2026-10-20",
+      "title": "Utility-pole sensor network",
+      "notes": "Air quality, weather, mosquito sensors with radio + solar on poles; partner with utilities; overlay on map",
+      "outcome": "on-tree",
+      "nodes": [
+        "O-18",
+        "O-19"
+      ],
+      "note": ""
+    },
+    {
+      "n": 96,
+      "id": "IDEA-0096",
+      "date": "2026-10-20",
+      "title": "Mobility assist robots",
+      "notes": "Help for elderly/disabled neighbors",
+      "outcome": "on-tree",
+      "nodes": [
+        "G-7"
+      ],
+      "note": ""
+    },
+    {
+      "n": 97,
+      "id": "IDEA-0097",
+      "date": "2026-10-20",
+      "title": "Water rescue drop",
+      "notes": "Lines or flotation to people stranded in floods",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-10"
+      ],
+      "note": ""
+    },
+    {
+      "n": 98,
+      "id": "IDEA-0098",
+      "date": "2026-10-20",
+      "title": "Hidden hazards + LiDAR archaeology",
+      "notes": "UXO on former U.S. military sites, abandoned mines; LiDAR, GPR, magnetometers; same tools for American archaeology. US focus, no international aid work",
+      "outcome": "on-tree",
+      "nodes": [
+        "X-12",
+        "X-13",
+        "MS-22"
+      ],
+      "note": ""
+    },
+    {
+      "n": 99,
+      "id": "IDEA-0099",
+      "date": "2026-10-20",
+      "title": "Site survey + home inspection",
+      "notes": "Build-monitoring robots; automated home inspection",
+      "outcome": "on-tree",
+      "nodes": [
+        "C-4",
+        "C-5"
+      ],
+      "note": ""
+    },
+    {
+      "n": 100,
+      "id": "IDEA-0100",
+      "date": "2026-10-20",
+      "title": "Citizen science + Meshtastic bridge",
+      "notes": "Anyone hosts a sensor; open shared map; encrypted bridge to Meshtastic LoRa networks",
+      "outcome": "on-tree",
+      "nodes": [
+        "T-NET5",
+        "MS-23"
+      ],
+      "note": ""
+    },
+    {
+      "n": 101,
+      "id": "IDEA-0101",
+      "date": "2026-10-20",
+      "title": "Training courses for every system",
+      "notes": "Per-system courses plus overarching stack courses",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Core principle (trained users); release standard in operations doc, System 2."
+    },
+    {
+      "n": 102,
+      "id": "IDEA-0102",
+      "date": "2026-10-19",
+      "title": "Membership process",
+      "notes": "Application → review of work/portfolio → interview → probation/trial project → full member; referral/invite path from existing members",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Operations doc, System 1."
+    },
+    {
+      "n": 103,
+      "id": "IDEA-0103",
+      "date": "2026-10-22",
+      "title": "Landscaping robot + site survey standard",
+      "notes": "Skid-steer-style robot, compact and full size, driven remotely or run autonomously from a drone site survey: mow tall grass and clear brush in hard-to-reach and semi-public spaces. A standard, lightweight, scalable site survey format any robot can use. Attachments later: small-tree shear, weed puller, planter, sod roller, spreader, inspection. Ask-and-learn when the robot is unsure; strict safety around people",
+      "outcome": "new-node",
+      "nodes": [
+        "T-SITE1",
+        "T-SITE2",
+        "T-SITE3",
+        "T-SAFE1",
+        "T-LEARN1",
+        "M-7",
+        "G-8",
+        "G-9",
+        "M-8",
+        "M-9",
+        "M-10",
+        "M-11",
+        "M-12",
+        "M-13",
+        "M-14",
+        "O-23",
+        "O-24",
+        "O-25",
+        "I-10",
+        "I-11",
+        "C-6"
+      ],
+      "note": "Added 21 nodes in website pull request #11."
+    },
+    {
+      "n": 104,
+      "id": "IDEA-0104",
+      "date": "2026-10-22",
+      "title": "Trail maintenance",
+      "notes": "Clear and maintain hiking and park trails with the compact landscaping robot",
+      "outcome": "parked",
+      "nodes": [
+        "G-8",
+        "O-23"
+      ],
+      "note": "Candidate node building on O-23 once the compact robot exists."
+    },
+    {
+      "n": 105,
+      "id": "IDEA-0105",
+      "date": "2026-10-22",
+      "title": "Storm debris cleanup",
+      "notes": "Clear fallen branches and debris after storms, guided by a fresh site survey",
+      "outcome": "parked",
+      "nodes": [
+        "G-9",
+        "O-23",
+        "MS-2"
+      ],
+      "note": "Candidate node for after storms; could join MS-2 (Autonomous Disaster Response)."
+    },
+    {
+      "n": 106,
+      "id": "IDEA-0106",
+      "date": "2026-10-22",
+      "title": "Shared ground chassis",
+      "notes": "Landscaping and snow robots share one base and swap tools on the quick-attach mount (e.g., a plow attachment)",
+      "outcome": "parked",
+      "nodes": [
+        "G-6",
+        "M-7"
+      ],
+      "note": "Possible connection: let the snow robot (G-6) use the quick-attach mount (M-7) so one chassis does both jobs."
+    },
+    {
+      "n": 107,
+      "id": "IDEA-0107",
+      "date": "2026-10-22",
+      "title": "AI brainstorming guide",
+      "notes": "A standard any AI agent can follow so people's ideas match OASA's values and fit the tech tree, ending in a ready-to-post idea or proposed nodes",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "In progress: a guide AI agents follow to brainstorm in OASA's format."
+    },
+    {
+      "n": 108,
+      "id": "IDEA-0108",
+      "date": "2026-10-22",
+      "title": "Idea inbox with numbered ideas",
+      "notes": "Every idea gets an IDEA number, then is sorted onto the tech tree: already there, expands a node, adds nodes, or connects nodes",
+      "outcome": "operations",
+      "nodes": [],
+      "note": "Built: this repo."
+    }
+  ]
+}
