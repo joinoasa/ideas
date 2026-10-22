@@ -4,7 +4,7 @@ How an idea gets from the inbox onto the tech tree. People and AI assistants fol
 
 ## 1. Read the idea and the tree
 
-- Read the whole idea, including any linked discussion.
+- Read the whole idea, including any linked discussion, and the automatic **first look** comment: it lists likely related nodes and similar ideas to start from.
 - Check the live tech tree: [joinoasa.org/techtree](https://joinoasa.org/techtree/) (the source is [`source/OASA-techtree.md`](https://github.com/joinoasa/website/blob/main/source/OASA-techtree.md) in the website repo).
 - Search for nodes that already cover it. Search by what the idea *does*, not only by its name.
 

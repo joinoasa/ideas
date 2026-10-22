@@ -1,0 +1,41 @@
+# Posts an automatic "first look" on each new idea: likely related tech tree nodes, similar ideas,
+# and a check of any node IDs it mentions. Keyword matching only, no AI. See scripts/first-look.mjs.
+# Ideas copied from Discussions get theirs from the copy job (issues made by the Actions token
+# don't trigger this workflow).
+name: First look at new ideas
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+    inputs:
+      number:
+        description: 'Idea number to (re)check'
+        required: true
+      force:
+        description: 'Post again even if it already has one'
+        type: boolean
+        default: false
+
+permissions:
+  issues: write
+  contents: read
+
+concurrency:
+  group: first-look-${{ github.event.issue.number || inputs.number }}
+  cancel-in-progress: false
+
+jobs:
+  look:
+    if: github.event_name == 'workflow_dispatch' || !github.event.issue.pull_request
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: First look
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/first-look.mjs ${{ github.event.issue.number || inputs.number }} ${{ inputs.force && '--force' || '' }}

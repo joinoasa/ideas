@@ -5,6 +5,7 @@
 //
 //   node scripts/import-discussions.mjs [--dry-run]
 import { REPO, gh, ideaId, allIssues, sleep, token } from './lib.mjs';
+import { postFirstLook } from './first-look.mjs';
 
 const SOURCE = process.env.DISCUSSIONS_REPO || 'joinoasa/.github';
 const CATEGORY = (process.env.DISCUSSIONS_CATEGORY || 'ideas').toLowerCase();
@@ -65,6 +66,7 @@ for (const d of fresh) {
   // Issues created with the Actions token don't trigger other workflows, so number it here.
   await gh(`repos/${REPO}/issues/${issue.number}`, { method: 'PATCH', body: { title: `${ideaId(issue.number)}: ${title}` } });
   console.log(`${ideaId(issue.number)} ← ${d.url}`);
+  try { await postFirstLook(issue.number); } catch (e) { console.log(`  (first look failed: ${e.message.slice(0, 120)})`); }
 
   if (process.env.DISCUSSIONS_TOKEN) {
     try {

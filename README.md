@@ -25,7 +25,7 @@ Every idea gets sorted into one outcome, shown as a label:
 | How OASA runs | `outcome:operations` | It's about the alliance itself (membership, chapters, Academy, events), not a technology. |
 | Parked | `outcome:parked` | A good idea for later. It stays open. |
 
-New ideas carry `needs-triage` until they're sorted. Once an idea is sorted, the tech tree nodes it touches list it, so anyone can see which ideas a node grew from.
+New ideas carry `needs-triage` until they're sorted. Within a minute, each one also gets an automatic **first look**: tech tree nodes that may be related, similar ideas, and a check of any node IDs it mentions. Once an idea is sorted, the tech tree nodes it touches list it, so anyone can see which ideas a node grew from.
 
 **Who sorts:** the founder for now, then project leads. People and their AI assistants follow the same steps in [TRIAGE.md](TRIAGE.md).
 
@@ -33,10 +33,13 @@ New ideas carry `needs-triage` until they're sorted. Once an idea is sorted, the
 
 | Path | What it is |
 |---|---|
+| `AGENTS.md` | Notes for AI agents working here |
 | `.github/ISSUE_TEMPLATE/idea.yml` | The idea form |
 | `.github/workflows/number.yml` | Puts the IDEA number in each title and marks new ideas `needs-triage` |
 | `.github/workflows/discussions.yml` | Copies new Ideas discussions here every hour |
+| `.github/workflows/first-look.yml` | Comments on each new idea with likely related nodes and similar ideas |
 | `scripts/triage.mjs` | Records an outcome on an idea (labels, linked nodes, comment) |
+| `scripts/first-look.mjs` | The automatic first look (keyword matching, no AI) |
 | `scripts/labels.mjs` | Creates or updates the labels |
 | `scripts/import-discussions.mjs` | The Discussions copy step |
 | `data/roadmap-import.json` | The first ideas, imported from the OASA roadmap |
