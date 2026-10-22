@@ -8,7 +8,7 @@ Anyone can post an idea. You don't need to be a member.
 
 - **Here:** [open the idea form](https://github.com/joinoasa/ideas/issues/new?template=idea.yml). It takes a few minutes.
 - **In Discussions:** start a post in the [Ideas category](https://github.com/orgs/joinoasa/discussions/categories/ideas). It's copied here within the hour and gets its own number.
-- **With your AI:** brainstorm with any AI assistant, then paste what it produces into the form.
+- **With your AI:** point any AI assistant at the [brainstorming guide](https://joinoasa.org/docs/brainstorm/), then paste what it produces into the form.
 
 Your idea's number is its issue number, so IDEA-0042 is issue #42. (Now and then a number is skipped, because pull requests share the same counter.)
 
