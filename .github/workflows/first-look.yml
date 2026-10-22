@@ -32,10 +32,26 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          path: ideas
+      # Tree and idea data come from the website repo (not the live site, which can refuse
+      # requests from GitHub's servers).
+      - uses: actions/checkout@v4
+        with:
+          repository: joinoasa/website
+          path: website
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Build tree and idea data
+        working-directory: website
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/build-techtree.mjs
       - name: First look
+        working-directory: ideas
         env:
           GH_TOKEN: ${{ github.token }}
+          TREE_DATA: ../website/src/data/techtree.json
+          IDEAS_DATA: ../website/src/data/ideas.json
         run: node scripts/first-look.mjs ${{ github.event.issue.number || inputs.number }} ${{ inputs.force && '--force' || '' }}

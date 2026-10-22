@@ -28,11 +28,27 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          path: ideas
+      # Tree and idea data come from the website repo (not the live site, which can refuse
+      # requests from GitHub's servers).
+      - uses: actions/checkout@v4
+        with:
+          repository: joinoasa/website
+          path: website
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Build tree and idea data
+        working-directory: website
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/build-techtree.mjs
       - name: Copy new discussions
+        working-directory: ideas
         env:
           GH_TOKEN: ${{ github.token }}
+          TREE_DATA: ../website/src/data/techtree.json
+          IDEAS_DATA: ../website/src/data/ideas.json
           DISCUSSIONS_TOKEN: ${{ secrets.DISCUSSIONS_TOKEN }}
         run: node scripts/import-discussions.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
